@@ -79,5 +79,42 @@ public class Aufgabe2 {
         return totalSum - max;
     }
 
+    /**
+     * Test method with the example from the assignment
+     */
+    public static void main(String[] args) {
+        int[] numbers = {4, 8, 3, 10, 17};
+
+        System.out.println("Array: ");
+        printArray(numbers);
+
+        System.out.println("\n1. Maximale Zahl:");
+        System.out.println(findeMaximaleZahl(numbers));
+
+        System.out.println("\n2. Minimale Zahl:");
+        System.out.println(findeMinimaleZahl(numbers));
+
+        System.out.println("\n3. Maximale Summe von n-1 Zahlen:");
+        System.out.println(findeMaximaleSumme(numbers));
+        System.out.println("   (4 + 8 + 10 + 17 = 39)");
+
+        System.out.println("\n4. Minimale Summe von n-1 Zahlen:");
+        System.out.println(findeMinimaleSumme(numbers));
+        System.out.println("   (4 + 8 + 3 + 10 = 25)");
+    }
+
+    /**
+     * Helper method to print an array
+     */
+    private static void printArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
 
 }
