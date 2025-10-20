@@ -101,4 +101,40 @@ public class Aufgabe1 {
 
         return max;
     }
+
+    /**
+     * Test method with the example from the assignment
+     */
+    public static void main(String[] args) {
+        int[] grades = {29, 37, 38, 41, 84, 67};
+
+        System.out.println("Original grades: ");
+        printArray(grades);
+
+        System.out.println("\n1. Nicht ausreichende Noten:");
+        printArray(getNichtAusreichendeNoten(grades));
+
+        System.out.println("\n2. Durchschnittswert:");
+        System.out.println(getDurchschnittswert(grades));
+
+        System.out.println("\n3. Abgerundete Noten:");
+        printArray(getAbgerundeteNoten(grades));
+
+        System.out.println("\n4. Maximale abgerundete Note:");
+        System.out.println(getMaximaleAbgerundeteNote(grades));
+    }
+
+    /**
+     * Helper method to print an array
+     */
+    private static void printArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(", ");
+            }
+        }
+        System.out.println("]");
+    }
 }
