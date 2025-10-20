@@ -80,5 +80,26 @@ public class Aufgabe3 {
         return result;
     }
 
+    /**
+     * Divides a large number by a single digit (integer division)
+     * @param zahl Large number as array
+     * @param ziffer Single digit (1-9)
+     * @return Quotient as array
+     */
+    public static int[] dividiere(int[] zahl, int ziffer) {
+        int n = zahl.length;
+        int[] result = new int[n];
+        int remainder = 0;
+
+        // Divide from left to right
+        for (int i = 0; i < n; i++) {
+            int current = remainder * 10 + zahl[i];
+            result[i] = current / ziffer;
+            remainder = current % ziffer;
+        }
+
+        return result;
+    }
+
     
 }
