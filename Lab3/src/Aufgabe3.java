@@ -101,5 +101,66 @@ public class Aufgabe3 {
         return result;
     }
 
-    
+    /**
+     * Test method with the examples from the assignment
+     */
+    public static void main(String[] args) {
+        // Test 1: Addition
+        System.out.println("1. Addition:");
+        int[] num1 = {1, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] num2 = {8, 7, 0, 0, 0, 0, 0, 0, 0};
+        System.out.print("   ");
+        printArray(num1);
+        System.out.print(" + ");
+        printArray(num2);
+        System.out.print(" = ");
+        printArray(addiere(num1, num2));
+        System.out.println();
+
+        // Test 2: Subtraction
+        System.out.println("\n2. Subtraktion:");
+        int[] num3 = {8, 3, 0, 0, 0, 0, 0, 0, 0};
+        int[] num4 = {5, 4, 0, 0, 0, 0, 0, 0, 0};
+        System.out.print("   ");
+        printArray(num3);
+        System.out.print(" - ");
+        printArray(num4);
+        System.out.print(" = ");
+        printArray(subtrahiere(num3, num4));
+        System.out.println();
+
+        // Test 3: Multiplication
+        System.out.println("\n3. Multiplikation:");
+        int[] num5 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        int digit1 = 2;
+        System.out.print("   ");
+        printArray(num5);
+        System.out.print(" * " + digit1 + " = ");
+        printArray(multipliziere(num5, digit1));
+        System.out.println();
+
+        // Test 4: Division
+        System.out.println("\n4. Division:");
+        int[] num6 = {2, 3, 6, 0, 0, 0, 0, 0, 0};
+        int digit2 = 2;
+        System.out.print("   ");
+        printArray(num6);
+        System.out.print(" / " + digit2 + " = ");
+        printArray(dividiere(num6, digit2));
+        System.out.println();
+    }
+
+    /**
+     * Helper method to print an array
+     */
+    private static void printArray(int[] array) {
+        System.out.print("[");
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]);
+            if (i < array.length - 1) {
+                System.out.print(" ");
+            }
+        }
+        System.out.print("]");
+    }
 }
